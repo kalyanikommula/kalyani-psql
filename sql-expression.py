@@ -6,7 +6,7 @@ from sqlalchemy import (
 # executing the instructions from our localhost "chinook" db
 db = create_engine("postgresql:///chinook")
 
-meta = MetaData()
+meta = MetaData(db)
 
 # create variable for "Artist" table
 artist_table = Table(
